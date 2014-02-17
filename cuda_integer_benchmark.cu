@@ -1,6 +1,6 @@
 /*
  * Author: Brian Bowden
- * Date: 1/25/14
+ * Date: 2/17/14
  *
  * cuda_integer_benchmark.cu
  * 
@@ -30,7 +30,7 @@ enum Instructions {
     Add, Sub, Mul, Div, MAD, VAdd, AND, OR, XOR, SHL, SHR, LRot, RRot
 };
 
-// change two lines below if you want to test Integers or Unsigned Integers
+// change two lines below if you want to test Integers, Unsigned Integers, Floats, or Doubles
 typedef int TYPE;
 #define DATATYPE (INT)
 
@@ -378,9 +378,7 @@ void gpu_init() {
 }
 
 int gcd(int a, int b) {
-    if (a == 0)
-	    return b;
-    return gcd (b % a, a);
+    return (a == 0) ? b : gcd(b % a, a);
 }
 
 int main(int argc, char **argv) {
