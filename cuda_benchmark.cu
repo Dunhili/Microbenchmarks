@@ -1,6 +1,6 @@
 /*
  * Author: Brian Bowden
- * Date: 2/17/14
+ * Date: 8/19/14
  *
  * cuda_integer_benchmark.cu
  * 
